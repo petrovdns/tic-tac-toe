@@ -14,28 +14,19 @@
  *    limitations under the License.
  */
 
-package com.petrovdns.tictactoe;
-
-import com.petrovdns.tictactoe.gameprocess.Game;
-import com.petrovdns.tictactoe.resolution.*;
+package com.petrovdns.tictactoe.resolution;
 
 /**
  * <p>Instagram: @petrovdns
  * <p>Telegram: +37379666011 | @ixyck
  */
 
-public class Launcher {
-    public static void main(String[] args) {
-        final Game game = new Game(
-                new UserStep(),
-                new PcStep(),
-                new StepVerifier(),
-                new WinnerVerifier(),
-                new Settings()
-        );
+public class Settings {
+    public char getPlayerChar() {
+        return 'X';
+    }
 
-        //start game!
-        game.play();
-
+    public char getPcChar() {
+        return 'O';
     }
 }
