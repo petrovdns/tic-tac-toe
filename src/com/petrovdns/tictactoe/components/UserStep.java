@@ -14,14 +14,17 @@
  *    limitations under the License.
  */
 
-package com.petrovdns.tictactoe.resolution;
+package com.petrovdns.tictactoe.components;
+
+import com.petrovdns.tictactoe.model.GameTable;
 
 /**
  * <p>Instagram: @petrovdns
  * <p>Telegram: +37379666011 | @ixyck
  */
-public class WinnerVerifier {
-    public boolean checkWin(char[] table) {
-        return false;
+
+public class UserStep {
+    public void input(GameTable gameTable, char playerChar) {
+
     }
 }

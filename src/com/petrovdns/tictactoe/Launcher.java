@@ -16,8 +16,8 @@
 
 package com.petrovdns.tictactoe;
 
-import com.petrovdns.tictactoe.gameprocess.Game;
-import com.petrovdns.tictactoe.resolution.*;
+import com.petrovdns.tictactoe.components.*;
+import com.petrovdns.tictactoe.gamelogic.Game;
 
 /**
  * <p>Instagram: @petrovdns

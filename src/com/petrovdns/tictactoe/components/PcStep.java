@@ -14,14 +14,17 @@
  *    limitations under the License.
  */
 
-package com.petrovdns.tictactoe.resolution;
+package com.petrovdns.tictactoe.components;
+
+import com.petrovdns.tictactoe.gamelogic.Game;
+import com.petrovdns.tictactoe.model.GameTable;
 
 /**
  * <p>Instagram: @petrovdns
  * <p>Telegram: +37379666011 | @ixyck
  */
 public class PcStep {
-    public void input(char[] table, char pcChar) {
+    public void input(GameTable gameTable, char pcChar) {
 
     }
 }

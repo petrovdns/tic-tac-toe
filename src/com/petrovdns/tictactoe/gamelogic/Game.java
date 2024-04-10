@@ -14,9 +14,10 @@
  *    limitations under the License.
  */
 
-package com.petrovdns.tictactoe.gameprocess;
+package com.petrovdns.tictactoe.gamelogic;
 
-import com.petrovdns.tictactoe.resolution.*;
+import com.petrovdns.tictactoe.components.*;
+import com.petrovdns.tictactoe.model.GameTable;
 
 /**
  * <p>Instagram: @petrovdns
@@ -43,17 +44,18 @@ public class Game {
     }
 
     public void play() {
-        final GameTable gameTable = new GameTable();
-        int gameStep = 9;
+        final GameTable gameTable = new GameTable(); //model
+        int gameStep = settings.getStep(); //9
+        gameTable.drawTable();
         while (true) {
-            if (winnerVerifier.checkWin(gameTable.getTable()) && stepVerifier.checkGameStep(gameStep--)) {
-                userStep.input(gameTable.getTable(), settings.getPlayerChar());
+            if (winnerVerifier.checkWin(gameTable) && stepVerifier.checkGameStep(gameStep--)) {
+                userStep.input(gameTable, settings.getPlayerChar());
             } else {
                 break;
             }
 
-            if (winnerVerifier.checkWin(gameTable.getTable()) && stepVerifier.checkGameStep(gameStep--)) {
-                pcStep.input(gameTable.getTable(), settings.getPcChar());
+            if (winnerVerifier.checkWin(gameTable) && stepVerifier.checkGameStep(gameStep--)) {
+                pcStep.input(gameTable, settings.getPcChar());
             } else {
                 break;
             }

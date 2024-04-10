@@ -14,19 +14,15 @@
  *    limitations under the License.
  */
 
-package com.petrovdns.tictactoe.resolution;
+package com.petrovdns.tictactoe.components;
 
 /**
  * <p>Instagram: @petrovdns
  * <p>Telegram: +37379666011 | @ixyck
  */
 
-public class Settings {
-    public char getPlayerChar() {
-        return 'X';
-    }
-
-    public char getPcChar() {
-        return 'O';
+public class StepVerifier {
+    public boolean checkGameStep(int gameStep) {
+        return false;
     }
 }
