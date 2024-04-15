@@ -23,6 +23,11 @@ package com.petrovdns.tictactoe.components;
 
 public class StepVerifier {
     public boolean checkGameStep(int gameStep) {
-        return false;
+        boolean step = false;
+        if (gameStep == 0) {
+            System.out.println("Celulele s-au terminat. Ati finisat jocul egal!");
+            step = true;
+        }
+        return !step;
     }
 }
