@@ -18,13 +18,26 @@ package com.petrovdns.tictactoe.components;
 
 import com.petrovdns.tictactoe.model.GameTable;
 
+import java.util.Scanner;
+
 /**
  * <p>Instagram: @petrovdns
  * <p>Telegram: +37379666011 | @ixyck
  */
 
-public class UserStep {
+public class UserStep extends ValidInsert {
     public void input(GameTable gameTable, char playerChar) {
-
+        boolean input = false;
+        while (!input) {
+            System.out.print("Introdu celula: ");
+            int userInput = new Scanner(System.in).nextInt();
+            if (isValidInsert(gameTable, userInput)) {
+                gameTable.setData(userInput - 1, playerChar);
+                input = true;
+                gameTable.drawTable();
+            } else {
+                System.out.println("Ai ales o celula gresita!");
+            }
+        }
     }
 }

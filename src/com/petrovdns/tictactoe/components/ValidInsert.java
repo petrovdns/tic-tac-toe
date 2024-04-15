@@ -18,24 +18,15 @@ package com.petrovdns.tictactoe.components;
 
 import com.petrovdns.tictactoe.model.GameTable;
 
-import java.util.Random;
-
 /**
  * <p>Instagram: @petrovdns
  * <p>Telegram: +37379666011 | @ixyck
  */
-public class PcStep extends ValidInsert {
-    public void input(GameTable gameTable, char pcChar) {
-        Random random = new Random();
-        boolean input = false;
-        while (!input) {
-            int pcInput = random.nextInt(9) + 1;
-            if (isValidInsert(gameTable, pcInput)) {
-                gameTable.setData(pcInput - 1, pcChar);
-                input = true;
-                System.out.println("PC a selectat celula!");
-                gameTable.drawTable();
-            }
-        }
+public class ValidInsert {
+    public boolean isValidInsert(GameTable gameTable, int allInput) {
+        char allChar = (char) (allInput + '0');
+        return '9' >= allChar && allChar >= '1'
+                && gameTable.getData(allInput - 1) != 'X'
+                && gameTable.getData(allInput - 1) != 'O';
     }
 }
