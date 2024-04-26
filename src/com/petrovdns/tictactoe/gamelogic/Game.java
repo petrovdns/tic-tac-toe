@@ -57,6 +57,7 @@ public class Game {
             if (winnerVerifier.checkWin(gameTable) && stepVerifier.checkGameStep(gameStep--)) {
                 pcStep.input(gameTable, settings.getPcChar());
             } else {
+                System.out.println();
                 break;
             }
         }
