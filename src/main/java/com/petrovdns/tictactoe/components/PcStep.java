@@ -17,6 +17,7 @@
 package com.petrovdns.tictactoe.components;
 
 import com.petrovdns.tictactoe.model.GameTable;
+import org.springframework.stereotype.Component;
 
 import java.util.Random;
 
@@ -24,6 +25,7 @@ import java.util.Random;
  * <p>Instagram: @petrovdns
  * <p>Telegram: +37379666011 | @ixyck
  */
+@Component
 public class PcStep extends ValidInsert {
     public void input(GameTable gameTable, char pcChar) {
         Random random = new Random();

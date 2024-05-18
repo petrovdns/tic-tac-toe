@@ -16,11 +16,14 @@
 
 package com.petrovdns.tictactoe.components;
 
+import org.springframework.stereotype.Component;
+
 /**
  * <p>Instagram: @petrovdns
  * <p>Telegram: +37379666011 | @ixyck
  */
 
+@Component
 public class Settings {
     public char getPlayerChar() {
         return 'X';

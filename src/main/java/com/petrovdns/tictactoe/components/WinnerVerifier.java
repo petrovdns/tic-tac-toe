@@ -17,11 +17,14 @@
 package com.petrovdns.tictactoe.components;
 
 import com.petrovdns.tictactoe.model.GameTable;
+import org.springframework.stereotype.Component;
 
 /**
  * <p>Instagram: @petrovdns
  * <p>Telegram: +37379666011 | @ixyck
  */
+
+@Component
 public class WinnerVerifier {
     public boolean checkWin(GameTable gameTable) {
         boolean win = false;

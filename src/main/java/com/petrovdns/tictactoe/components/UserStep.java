@@ -17,6 +17,7 @@
 package com.petrovdns.tictactoe.components;
 
 import com.petrovdns.tictactoe.model.GameTable;
+import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
 
@@ -25,6 +26,7 @@ import java.util.Scanner;
  * <p>Telegram: +37379666011 | @ixyck
  */
 
+@Component
 public class UserStep extends ValidInsert {
     public void input(GameTable gameTable, char playerChar) {
         boolean input = false;

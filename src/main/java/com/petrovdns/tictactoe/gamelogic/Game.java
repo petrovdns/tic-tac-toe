@@ -18,33 +18,30 @@ package com.petrovdns.tictactoe.gamelogic;
 
 import com.petrovdns.tictactoe.components.*;
 import com.petrovdns.tictactoe.model.GameTable;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 /**
  * <p>Instagram: @petrovdns
  * <p>Telegram: +37379666011 | @ixyck
  */
 
+@Component
 public class Game {
-    private final UserStep userStep;
-    private final PcStep pcStep;
-    private final StepVerifier stepVerifier;
-    private final WinnerVerifier winnerVerifier;
-    private final Settings settings;
-
-    public Game(final UserStep userStep,
-                final PcStep pcStep,
-                final StepVerifier stepVerifier,
-                final WinnerVerifier winnerVerifier, Settings settings) {
-
-        this.userStep = userStep;
-        this.pcStep = pcStep;
-        this.stepVerifier = stepVerifier;
-        this.winnerVerifier = winnerVerifier;
-        this.settings = settings;
-    }
+    @Autowired
+    private UserStep userStep;
+    @Autowired
+    private PcStep pcStep;
+    @Autowired
+    private StepVerifier stepVerifier;
+    @Autowired
+    private WinnerVerifier winnerVerifier;
+    @Autowired
+    private Settings settings;
+    @Autowired
+    private GameTable gameTable;
 
     public void play() {
-        final GameTable gameTable = new GameTable(); //model
         int gameStep = settings.getStep(); //9
         gameTable.drawTable();
         while (true) {

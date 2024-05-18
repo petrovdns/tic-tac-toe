@@ -33,6 +33,5 @@ public class Launcher {
 
         //start game!
         game.play();
-
     }
 }

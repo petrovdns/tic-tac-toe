@@ -23,7 +23,7 @@ import com.petrovdns.tictactoe.model.GameTable;
  * <p>Telegram: +37379666011 | @ixyck
  */
 public class ValidInsert {
-    public boolean isValidInsert(GameTable gameTable, int allInput) {
+    protected boolean isValidInsert(GameTable gameTable, int allInput) {
         char allChar = (char) (allInput + '0');
         return '9' >= allChar && allChar >= '1'
                 && gameTable.getData(allInput - 1) != 'X'

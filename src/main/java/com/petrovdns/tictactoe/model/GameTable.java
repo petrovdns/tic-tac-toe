@@ -16,10 +16,14 @@
 
 package com.petrovdns.tictactoe.model;
 
+import org.springframework.stereotype.Component;
+
 /**
  * <p>Instagram: @petrovdns
  * <p>Telegram: +37379666011 | @ixyck
  */
+
+@Component
 public class GameTable {
     private final char[] table = {'1', '2', '3', '4', '5', '6', '7', '8', '9'};
 

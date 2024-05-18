@@ -24,34 +24,6 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:property-placeholder location="classpath:set.properties"/>
-
-    <bean id="userStep"
-          class="${directory}.${userstep}">
-    </bean>
-
-    <bean id="pcStep"
-          class="${directory}.${pcstep}">
-    </bean>
-
-    <bean id="stepVerifier"
-          class="${directory}.${stepverifier}">
-    </bean>
-
-    <bean id="winnerVerifier"
-          class="${directory}.${winnerverifier}">
-    </bean>
-
-    <bean id="settings"
-          class="${directory}.${settings}">
-    </bean>
-
-    <bean id="game"
-          class="${sourceroot}.gamelogic.Game">
-        <constructor-arg ref="userStep"/>
-        <constructor-arg ref="pcStep"/>
-        <constructor-arg ref="stepVerifier"/>
-        <constructor-arg ref="winnerVerifier"/>
-        <constructor-arg ref="settings"/>
-    </bean>
+    <context:component-scan base-package="com.petrovdns.tictactoe"/>
 
 </beans>
