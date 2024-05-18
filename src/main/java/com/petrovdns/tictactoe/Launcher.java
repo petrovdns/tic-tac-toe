@@ -16,8 +16,8 @@
 
 package com.petrovdns.tictactoe;
 
-import com.petrovdns.tictactoe.components.*;
 import com.petrovdns.tictactoe.gamelogic.Game;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * <p>Instagram: @petrovdns
@@ -26,13 +26,10 @@ import com.petrovdns.tictactoe.gamelogic.Game;
 
 public class Launcher {
     public static void main(String[] args) {
-        final Game game = new Game(
-                new UserStep(),
-                new PcStep(),
-                new StepVerifier(),
-                new WinnerVerifier(),
-                new Settings()
-        );
+        ClassPathXmlApplicationContext context =
+                new ClassPathXmlApplicationContext("applicationContext.xml");
+
+        var game = context.getBean("game", Game.class);
 
         //start game!
         game.play();
